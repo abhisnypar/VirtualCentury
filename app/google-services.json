@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "493245181500",
+    "firebase_url": "https://virtualcentury-2f1bf.firebaseio.com",
+    "project_id": "virtualcentury-2f1bf",
+    "storage_bucket": "virtualcentury-2f1bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:493245181500:android:df076e103b329177",
+        "android_client_info": {
+          "package_name": "cricket.ib.virtualcentury"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "493245181500-dag49i6hbdfhmm2320slb8u7ktg2pme3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAWfUmrz60SEnyebLm7vVx9_nOp-lGNQE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

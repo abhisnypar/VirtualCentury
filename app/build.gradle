@@ -1,0 +1,135 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    //noinspection GradleCompatible
+    compile 'com.android.support:support-v4:26.+'
+    compile 'com.android.support:design:26.+'
+}
+android {
+
+    android {
+        compileSdkVersion 26
+        buildToolsVersion "26.0.1"
+        defaultConfig {
+            applicationId "cricket.ib.virtualcentury"
+            minSdkVersion 23
+            targetSdkVersion 26
+            versionCode 1
+            versionName "1.0"
+            multiDexEnabled true
+            testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+            buildConfigField "String", "OATH_REDIRECT_URI", '"https://virtualcentury-2f1bf.firebaseapp.com/__/auth/handler"'
+            buildConfigField "String", "Access_Token", '"access_token"'
+            buildConfigField "String", "Application_Id", '"application_id"'
+            buildConfigField "String", "Expires_In", '""'
+        }
+        buildTypes {
+            release {
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            }
+        }
+
+        packagingOptions {
+            exclude 'META-INF/rxjava.properties'
+        }
+
+    }
+
+    dependencies {
+
+        compile fileTree(include: ['*.jar'], dir: 'libs')
+        androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+            exclude group: 'com.android.support', module: 'support-annotations'
+        })
+
+        //multidex
+        compile 'com.android.support:multidex:1.0.1'
+
+        //noinspection GradleCompatible
+        compile 'com.android.support:support-annotations:26.1.0'
+        compile 'com.android.support:appcompat-v7:26.1.0'
+        compile 'com.android.support:cardview-v7:26.1.0'
+        compile 'com.android.support:support-v4:26.1.0'
+        compile 'com.android.support:design:26.1.0'
+        compile 'com.android.support.constraint:constraint-layout:1.0.2'
+        compile 'com.android.support:recyclerview-v7:26.1.0'
+        compile 'com.android.support:customtabs:26.1.0'
+        compile 'com.android.support:preference-v7:26.1.0'
+
+        // Kotlin
+        compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:1.1.1"
+        androidTestCompile "org.jetbrains.kotlin:kotlin-test-junit:1.2.0"
+
+        // Kotlin coroutines
+        compile "org.jetbrains.kotlinx:kotlinx-coroutines-android:0.20"
+        // Retrofit + Coroutines
+        compile 'ru.gildor.coroutines:kotlin-coroutines-retrofit:0.8.2'
+
+        // Facebook SignIn
+        compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+        compile 'com.google.firebase:firebase-messaging:11.4.2'
+        compile('com.amazonaws:aws-android-sdk-auth-facebook:2.6.+@aar') { transitive = true; }
+
+        //Airbnb
+        compile 'com.airbnb.android:lottie:2.5.0'
+
+        //Dagger 2
+//        compile 'com.google.dagger:dagger:2.11-rc2'
+//        compile 'com.google.dagger:dagger-android-support:2.11-rc2'
+//        kapt 'com.google.dagger:dagger-compiler:2.11-rc2'
+//        kapt "com.google.dagger:dagger-android-processor:2.11-rc2"
+//        annotationProcessor 'com.google.dagger:dagger-compiler:2.11-rc2'
+        kapt 'com.google.dagger:dagger-compiler:2.5'
+        compile 'com.google.dagger:dagger:2.5'
+
+        //Rx Java
+        compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+        compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+        compile 'com.squareup.retrofit2:retrofit:2.1.0'
+        compile 'io.reactivex:rxandroid:1.2.0'
+        compile 'io.reactivex:rxjava:1.1.8'
+
+        //Butterknife
+        compile 'com.jakewharton:butterknife:8.8.1'
+        annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+        //aws - Mobile Client for initializing the SDK
+        compile('com.amazonaws:aws-android-sdk-mobile-client:2.6.7@aar') { transitive = true; }
+
+        compile('com.amazonaws:aws-android-sdk-mobile-client:2.6.+@aar') { transitive = true; }
+        // Sign in UI
+        compile('com.amazonaws:aws-android-sdk-auth-ui:2.6.+@aar') { transitive = true; }
+        // Cognito UserPools for SignIn
+        compile('com.amazonaws:aws-android-sdk-auth-userpools:2.6.+@aar') { transitive = true; }
+        compile 'com.amazonaws:aws-android-sdk-core:2.6.0'
+        compile 'com.amazonaws:aws-android-sdk-auth-core:2.6.0@aar'
+        compile 'com.amazonaws:aws-android-sdk-pinpoint:2.6.0'
+        compile 'com.amazonaws:aws-android-sdk-auth-userpools:2.6.0@aar'
+        compile 'com.amazonaws:aws-android-sdk-cognitoidentityprovider:2.6.0'
+        compile 'com.google.firebase:firebase-auth:11.4.2'
+
+        //Fluxion
+        compile 'com.github.nigelbro:fluxion:v2.3.0'
+
+    }
+    repositories {
+        mavenCentral()
+    }
+
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+    }
+}
+kotlin {
+    experimental {
+        coroutines "enable"
+    }
+}
+kapt {
+    generateStubs = true
+}

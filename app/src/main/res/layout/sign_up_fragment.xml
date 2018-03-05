@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signup_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="com.amazonaws.mobile.auth.userpools.SignUpActivity">
+
+    <ProgressBar
+        android:id="@+id/sign_up_progress_bar"
+        android:visibility="invisible"
+        style="@style/Base.Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sing_up_welcome"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/sign_up_username_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/username"/>
+
+    <EditText
+        android:id="@+id/sign_up_password_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:id="@+id/sign_up_phone_number_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="@string/phone_number_text"/>
+
+
+    <Button
+        android:id="@+id/signup_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/user_pools_button_height"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:onClick="signUp"
+        android:text="@string/title_activity_sign_up"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/user_pools_button_text_size"/>
+
+</LinearLayout>

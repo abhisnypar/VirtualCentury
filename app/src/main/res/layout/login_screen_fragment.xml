@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/snackbar_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="ObsoleteLayoutParam">
+
+        <LinearLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/welcome_message"
+                style="@android:style/TextAppearance.DeviceDefault.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="40dp"
+                android:text="@string/welcome_text"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:hint="@string/username"/>
+
+            <EditText
+                android:id="@+id/password_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:hint="@string/password"
+                android:inputType="textPassword"/>
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="@string/sign"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/singup_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <Button
+                android:id="@+id/forgot_password_button"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:text="@string/reset_forgot_password_button_hint"
+                android:textColor="@color/colorPrimary"/>
+
+            <Button
+                android:id="@+id/register"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_marginStart="100dp"
+                android:text="@string/register_aws"
+                android:textColor="@color/colorPrimary"/>
+        </LinearLayout>
+
+        <com.amazonaws.mobile.auth.facebook.FacebookButton
+            android:id="@+id/facebook_login"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="270dp"
+            android:textAlignment="center"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</LinearLayout>

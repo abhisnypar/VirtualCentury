@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">VirtualCentury</string>
+    <string name="welcome_text">Welcome to Virtual Century</string>
+    <string name="login">Get Started</string>
+    <string name="username">Username</string>
+    <string name="password">password</string>
+    <string name="sign">Login</string>
+    <string name="sign_up">New User? SignUp here</string>
+    <string name="loginwith">Continue with facebook</string>
+    <string name="login_with">Continue with facebook</string>
+    <string name="facebook_login_id">329506327453550</string>
+    <string name="fb_login_protocol_scheme">fb329506327453550</string>
+    <string name="login_with_facebook">Sign in with Facebook</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="logout">logout</string>
+    <string name="login_fragment_text">Login With Facebook</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="register_aws">Sign Up</string>
+    <string name="reset_forgot_password_button_hint">forget password</string>
+    <string name="sing_up_welcome">Ennter your information to sign up</string>
+    <string name="locations_map_view">Locations</string>
+</resources>
