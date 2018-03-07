@@ -1,4 +1,4 @@
-package cricket.ib.virtualcentury.login.fragments
+package cricket.ib.virtualcentury.login.signup
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -12,7 +12,7 @@ import com.nigelbrown.fluxion.Flux
 import cricket.ib.virtualcentury.Application
 import cricket.ib.virtualcentury.R
 import cricket.ib.virtualcentury.action.ActionCreator
-import cricket.ib.virtualcentury.login.FirebaseLoginFlow
+import cricket.ib.virtualcentury.login.loginManager.FirebaseLoginFlow
 
 
 class SignupFragment : Fragment(), View.OnClickListener {

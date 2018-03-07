@@ -1,4 +1,4 @@
-package cricket.ib.virtualcentury.login;
+package cricket.ib.virtualcentury.login.loginclasses;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -13,7 +13,7 @@ import com.nigelbrown.fluxion.Reaction;
 import butterknife.ButterKnife;
 import cricket.ib.virtualcentury.R;
 import cricket.ib.virtualcentury.home.HomeActivity;
-import cricket.ib.virtualcentury.login.fragments.SignupFragment;
+import cricket.ib.virtualcentury.login.signup.SignupFragment;
 import cricket.ib.virtualcentury.store.AppStore;
 import cricket.ib.virtualcentury.store.Reactions;
 
@@ -30,16 +30,10 @@ public class LoginActivity extends AppCompatActivity {
         mAppStore = new AppStore(Flux.getsInstance());
         facebookCallbackManager = CallbackManager.Factory.create();
         sharedPreferences = getSharedPreferences("CURRENT", MODE_PRIVATE);
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.login_activity_fragment_container, new LoginFragment())
                 .commit();
     }
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -68,5 +62,4 @@ public class LoginActivity extends AppCompatActivity {
     public void showHomeScreen(Reaction reaction) {
         startActivity(new Intent(this, HomeActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP));
     }
-
 }

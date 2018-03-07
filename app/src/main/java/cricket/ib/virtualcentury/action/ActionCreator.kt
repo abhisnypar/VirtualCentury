@@ -11,4 +11,6 @@ class ActionCreator(flux: Flux) : FluxActionCreator(flux), Actions {
 
     override fun singnUpSuccess() = emitAction(Actions.SINGUP_ON_SUCCESS)
 
+    override fun logout()  = emitAction(Actions.LOGOUT)
+
 }

@@ -22,4 +22,7 @@ class AppStore(flux: Flux) : FluxStore(flux) {
 
     @Action(actionType = Actions.LOGIN_ON_SUCCESS)
     fun showHomeFragmentScreen(fluxAction: FluxAction) = emitReaction(Reactions.SHOW_HOME_SCREEN)
+
+    @Action(actionType = Actions.LOGOUT)
+    fun showLoginActivity(fluxAction: FluxAction) = emitReaction(Reactions.LOGOUT_SUCCESS)
 }

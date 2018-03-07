@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 
-import cricket.ib.virtualcentury.login.LoginActivity
+import cricket.ib.virtualcentury.login.loginclasses.LoginActivity
 
 class SplashScreen : AppCompatActivity() {
 

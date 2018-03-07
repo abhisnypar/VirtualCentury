@@ -23,4 +23,6 @@
     <string name="reset_forgot_password_button_hint">forget password</string>
     <string name="sing_up_welcome">Ennter your information to sign up</string>
     <string name="locations_map_view">Locations</string>
+    <string name="connect_with_facebbok">Connect With Facebook</string>
+    <string name="firebase_db_table">FacebookLoginCredentials</string>
 </resources>

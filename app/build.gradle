@@ -26,6 +26,7 @@ android {
             buildConfigField "String", "Access_Token", '"access_token"'
             buildConfigField "String", "Application_Id", '"application_id"'
             buildConfigField "String", "Expires_In", '""'
+            buildConfigField "String", "FIRE_BASE_DB_LINK", '"https://virtualcentury-2f1bf.firebaseio.com/"'
         }
         buildTypes {
             release {
@@ -72,7 +73,12 @@ android {
 
         // Facebook SignIn
         compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+
+        //Firebase
         compile 'com.google.firebase:firebase-messaging:11.4.2'
+        compile 'com.google.firebase:firebase-database:11.4.2'
+
+        //AWs
         compile('com.amazonaws:aws-android-sdk-auth-facebook:2.6.+@aar') { transitive = true; }
 
         //Airbnb

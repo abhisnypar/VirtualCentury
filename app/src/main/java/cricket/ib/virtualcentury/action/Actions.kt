@@ -7,6 +7,7 @@ interface Actions {
         const val SIGNUP_BUTTON_CLICKED = "signupButtonClicked"
         const val SINGUP_ON_SUCCESS = "signUpSuccess"
         const val LOGIN_ON_SUCCESS = "signUpSuccess"
+        const val LOGOUT = "logout"
     }
 
     fun signupButtonClicked()
@@ -15,4 +16,5 @@ interface Actions {
 
     fun loginSuccess()
 
+    fun logout()
 }

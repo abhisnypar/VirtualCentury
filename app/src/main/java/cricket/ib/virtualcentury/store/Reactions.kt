@@ -6,5 +6,6 @@ interface Reactions {
         const val SHOW_SIGNUP_SCREEN = "showSignupScreen"
         const val SHOW_LOGIN_SCREEN = "showLoginScreen"
         const val SHOW_HOME_SCREEN = "showHomeScreen"
+        const val LOGOUT_SUCCESS = "showLogout"
     }
 }

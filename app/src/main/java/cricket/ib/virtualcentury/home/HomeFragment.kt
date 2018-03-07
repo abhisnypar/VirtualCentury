@@ -6,18 +6,18 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import butterknife.ButterKnife
-import butterknife.OnClick
-import com.facebook.AccessToken
 import cricket.ib.virtualcentury.R
-import cricket.ib.virtualcentury.login.FirebaseLoginFlow
+import cricket.ib.virtualcentury.login.loginManager.FirebaseLoginFlow
 
 
 /**
  * A simple [Fragment] subclass.
  */
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), View.OnClickListener {
     private var firebaseLoginFlow: FirebaseLoginFlow? = null
+    private var logout: Button? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -25,13 +25,14 @@ class HomeFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         ButterKnife.bind(this, view)
         firebaseLoginFlow = FirebaseLoginFlow()
+        logout = view.findViewById(R.id.logout)
+        logout?.setOnClickListener(this)
         return view
     }
 
-    @OnClick(R.id.logout)
-    fun onLogout() {
-        if (AccessToken.getCurrentAccessToken() != null) {
-            firebaseLoginFlow?.signOut()
+    override fun onClick(view: View?) {
+        when(view){
+            logout -> firebaseLoginFlow?.signOut()
         }
     }
 }
